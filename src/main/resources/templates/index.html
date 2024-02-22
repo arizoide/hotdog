@@ -28,27 +28,15 @@
 </header>
 <main>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Nome: </th>
-                <th>Imagem: </th>
-                <th>Descrição: </th>
-                <th>Valor: </th>
-                <th>Ações: </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr th:each="b : ${bolos}">
-                <td th:text="${b.nome}"></td>
-                <td><img th:src="${b.nomeImagem}"></td>
-                <td th:text="${b.descricao}"></td>
-                <td th:text="${b.valor}"></td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
-
+    <ul class="lista-bolos">
+        <li th:each="b : ${bolos}">
+            <h2 th:text="${b.nome}"></h2>
+            <img class="img-bolos" th:src="${b.nomeImagem}">
+            <p class="bolo-descricao" th:text="${b.descricao}"></p>
+            <p class="bolo-preco" th:text="${b.valor}"></p>
+            <p sec:authorize="hasRole('ROLE_ADMIN')">editar</p>
+        </li>
+    </ul>
     <div class="wpp">
         <a href="https://api.whatsapp.com/send?phone=5519999999999&text=Texto%20aqui"
            target="_blank">
