@@ -1,0 +1,123 @@
+header {
+    background-color: #7e5002;
+}
+
+.bloco {
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.img-logo {
+    width: 250px;
+    height: 250px;
+}
+
+nav {
+    position: absolute; 
+    right: 0; 
+    top: 115px;
+}
+
+nav li {
+    display: inline;
+    margin-left: 15px;    
+}
+
+.link {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fbdc57;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.link:hover {
+    color: white;
+    transition: 300ms;
+    cursor: url(bolo_churros.jpg);
+}
+
+.img-bolos {
+    width: 200px;
+    height: 200px;
+}
+
+.lista-bolos {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.lista-bolos li {
+    display: inline-block;
+    width: 30%;
+    height: 350px;
+    text-align: center;
+    vertical-align: top;
+    border: 3px solid black;
+    padding: 15px 15px;
+    margin: 15px 1.5%;
+    border-radius: 15px 15px;
+    box-sizing: border-box;
+}
+
+.lista-bolos li:hover {
+    border-color: #7e5002;
+    transition: 300ms;
+}
+
+.lista-bolos li:hover h2{
+    font-size: 30px;
+    color: #7e5002;
+}
+
+.lista-bolos li:hover .bolo-preco{
+    text-decoration: line-through;
+    color: #08612d;
+    transition: 1000ms;    
+    text-decoration: none;
+    font-size: 32px;
+}
+
+
+.lista-bolos h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 15px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bolo-descricao {
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 15px 0;
+}
+
+.bolo-preco {
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.wpp {
+    position: relative;
+    margin: 0 auto;
+}
+
+.img-wpp {
+    position: fixed;
+    display: inline-block;
+    margin: 50px 0px 0px 0px;
+    right: 50px;
+    bottom: 50px;
+}
+
+footer {
+    text-align: center;
+    background-color: #ddb571;
+}
+
+footer img {
+    margin-top: 25px;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="imagens/logo.jpg">
+
+    <title>Bolos caseiro - S&atilde;o Jos&eacute;</title>
+</head>
+
+<body>
+<header>
+    <div class="bloco">
+        <h1><img class="img-logo" src="imagens/logo.jpg"></h1>
+        <nav>
+            <ul>
+                <li><a class="link" href="#">Home</a></li>
+                <li><a class="link" href="#">Bolos</a></li>
+                <li><a class="link" href="contato.html">Contato</a></li>
+                <li><a class="link" href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome: </th>
+                <th>Imagem: </th>
+                <th>Descrição: </th>
+                <th>Valor: </th>
+                <th>Ações: </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="b : ${bolos}">
+                <td th:text="${b.nome}"></td>
+                <td th:text="${b.nomeImagem}"></td>
+                <td th:text="${b.descricao}"></td>
+                <td th:text="${b.valor}"></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="wpp">
+        <a href="https://api.whatsapp.com/send?phone=5519999999999&text=Texto%20aqui"
+           target="_blank">
+            <img class="img-wpp" src="imagens/wpp-correto.png" width="50px" height="50px">
+        </a>
+    </div>
+</main>
+<footer>
+    <img width="100px" height="100px" src="imagens/logo.jpg" alt="logotipo">
+    <p>&copy; copyright - Todos os direitos reservados</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Bolo</title>
+</head>
+<body>
+    <form th:object="${bolo}" th:action="@{/bolo}" method="post">
+        <h1>Cadastro de bolo</h1>
+        <br><br>
+        <label for="nome">Nome:</label>
+        <input th:field="*{nome}" id="nome" type="text">
+        <br>
+        <label for="nomeImagem">Nome da Imagem:</label>
+        <input th:field="*{nomeImagem}" id="nomeImagem" type="text">
+        <br>
+        <label for="descricao">Descrição:</label>
+        <input th:field="*{descricao}" id="descricao" type="text">
+        <br>
+        <label for="preco">Preço:</label>
+        <input th:field="*{valor}" id="preco" type="text">
+        <br>
+        <br><br>
+        <input type="submit" value="Cadastrar">
+    </form>
+</body>
+</html>
