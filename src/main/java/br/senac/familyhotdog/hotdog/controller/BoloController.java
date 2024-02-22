@@ -24,6 +24,8 @@ public class BoloController {
     @PostMapping
     public String salvarCadBolo(Bolo bolo){
 
+        bolo.setNomeImagem("imagens/"+bolo.getNomeImagem()+".jpg");
+
         boloRepository.save(bolo);
 
         return "redirect:/";

@@ -41,7 +41,7 @@
         <tbody>
             <tr th:each="b : ${bolos}">
                 <td th:text="${b.nome}"></td>
-                <td th:text="${b.nomeImagem}"></td>
+                <td><img th:src="${b.nomeImagem}"></td>
                 <td th:text="${b.descricao}"></td>
                 <td th:text="${b.valor}"></td>
                 <td></td>
