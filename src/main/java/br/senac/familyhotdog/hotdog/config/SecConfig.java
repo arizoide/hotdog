@@ -1,6 +1,7 @@
 package br.senac.familyhotdog.hotdog.config;
 
 
+import br.senac.familyhotdog.hotdog.model.Tipo;
 import br.senac.familyhotdog.hotdog.service.UsuarioCustomDetailsService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -23,11 +24,13 @@ public class SecConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests(request -> request.requestMatchers("/", "/add_ususu", "/css/*", "/imagens/*","/ususu", "/login").permitAll()
+                        .requestMatchers("/editar-bolo").hasRole(Tipo.ADMIN.name())
                         .anyRequest().authenticated())
                 .formLogin(form -> form.loginPage("/login")
                         .defaultSuccessUrl("/", true)
                         .permitAll())
-                .logout(LogoutConfigurer::permitAll);
+                .logout(logout -> logout.logoutUrl("/logout")
+                        .logoutSuccessUrl("/"));
         return http.build();
     }
 

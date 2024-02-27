@@ -21,7 +21,7 @@
                 <li><a class="link" href="#">Home</a></li>
                 <li><a class="link" href="#">Bolos</a></li>
                 <li><a class="link" href="contato.html">Contato</a></li>
-                <li><a class="link" href="sobre.html">Sobre</a></li>
+                <li><a class="link" th:href="@{/logout}">Logout</a></li>
             </ul>
         </nav>
     </div>
@@ -34,7 +34,8 @@
             <img class="img-bolos" th:src="${b.nomeImagem}">
             <p class="bolo-descricao" th:text="${b.descricao}"></p>
             <p class="bolo-preco" th:text="${b.valor}"></p>
-            <p sec:authorize="hasRole('ROLE_ADMIN')">editar</p>
+            <p class="" sec:authorize="hasRole('ROLE_ADMIN')"><a th:href="@{/editar-bolo/{id} (id=${b.id})}">Editar</a></p>
+            <p class="" sec:authorize="hasRole('ROLE_ADMIN')"><a th:href="@{/excluir-bolo/{id} (id=${b.id})}">Apagar</a></p>
         </li>
     </ul>
     <div class="wpp">
